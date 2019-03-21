@@ -1,4 +1,14 @@
-<html>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EBaseFM Interview test</title>
+    <style>
+        body {font: normal 14px/1.5 sans-serif;}
+    </style>
+</head>
+<body>
+
 <?php
 
 $people = array(
@@ -11,18 +21,6 @@ $people = array(
 
 ?>
 
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>EBaseFM Interview test</title>
-    <style>
-        body {font: normal 14px/1.5 sans-serif;}
-    </style>
-    <script>
-    </script>
-</head>
-
 <table>
     <tr>
         <th>First Name</th>
@@ -31,13 +29,18 @@ $people = array(
         <th></th>
     </tr>
     <tbody>
-        <?php foreach ($people as $person): ?>
-            <tr>
-                <td><?php echo $person['first_name']; ?></td>
-                <td><?php echo $person['last_name']; ?></td>
-                <td><?php echo $person['email']; ?></td>
-            </tr>
-        <?php endforeach; ?>
+    <?php foreach ($people as $person): ?>
+        <tr>
+            <td><?php echo $person['first_name']; ?></td>
+            <td><?php echo $person['last_name']; ?></td>
+            <td><?php echo $person['email']; ?></td>
+            <td>
+                <button onclick="alert('<?php echo $person['first_name']; ?> <?php echo $person['last_name']; ?> <?php echo $person['email']; ?>');">
+                    Alert!
+                </button>
+            </td>
+        </tr>
+    <?php endforeach; ?>
     </tbody>
 </table> 
 
